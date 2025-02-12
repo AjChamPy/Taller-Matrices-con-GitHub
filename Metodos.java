@@ -18,11 +18,11 @@ public static int[] preguntarDimensionMatriz(){
     public int[][] llenarMatriz(int filas, int columnas){
         int[][] matriz = new int[filas][columnas];
         
-    for (int i = 0; i < matriz.length; i++) {
-        for (int j = 0; j < matriz.length; j++) { 
-            matriz[i][j] = (int)(Math.random()*100+1);
+        for (int i = 0; i <filas; i++) {
+            for (int j = 0; j < columnas; j++) { 
+                matriz[i][j] = (int)(Math.random()*2+1);
+            }
         }
-    }
 
         return  matriz;
     }
@@ -31,7 +31,7 @@ public static int[] preguntarDimensionMatriz(){
     public void mostrarMatriz(int[][] matriz){
         System.out.println("\n--- MATRIZ INGRESADA ---");
         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz.length; j++) {
+            for (int j = 0; j < matriz[i].length; j++) {
                 System.out.print(matriz[i][j] + "\t");
             }
             System.out.println();
