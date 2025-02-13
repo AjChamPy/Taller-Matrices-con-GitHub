@@ -13,6 +13,20 @@ public class Puntos {
         return suma;
     }
 
+    //Punto_2
+    public int numeroMayor(int[][] matriz){
+        int numeroMayor = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                if (matriz[i][j] >= numeroMayor) {
+                    numeroMayor = matriz[i][j];
+                }
+            }
+        }
+        System.out.println("El número mayor de la Matriz ingresada es: "+numeroMayor);
+        return numeroMayor;
+    }
+
     //Punto_3
 
     public void mostrarVector(int[] vector, String contador){
@@ -40,4 +54,37 @@ public class Puntos {
         }
         return sumColum;
     }
+
+    //Punto_4
+    public void sumaColumnas(int[][] matriz){
+        int numeroMayor = 0;
+        int c = 0;
+        int suma = 0;
+        int sumaC[] = new int[matriz.length];
+
+        for (int i = 0; i <= matriz.length; i++) {
+            if (i == matriz.length) {
+                i = 0;
+                sumaC[c] = suma;
+                suma = 0;
+                System.out.println(sumaC[c]);
+                c = c + 1;
+                if (c == matriz.length) {
+                    break;
+                }
+            }
+            for (int j = c; j <= c; j++) {
+                suma = suma + matriz[i][j];
+            }
+        }
+        for (int i = 0; i < sumaC.length; i++) {
+            if (sumaC[i] >= numeroMayor) {
+                numeroMayor = sumaC[i];
+                c = i;
+            }
+        }
+        System.out.println("La columna que tuvo sumando sus datos un valor más alto fue la número: "+(c+1)+"\nSu suma fue de: "+numeroMayor);
+    }
+
+    
 }

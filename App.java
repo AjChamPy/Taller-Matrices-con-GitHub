@@ -24,6 +24,12 @@ public class App {
                 Puntos punto1 = new Puntos();
                 punto1.sumarValores(matriz);
             }
+            case 2 ->{
+                int[][] matriz = mainMetodos.llenarMatriz(filas, columnas);
+                mainMetodos.mostrarMatriz(matriz);
+                Puntos punto2 = new Puntos();
+                punto2.numeroMayor(matriz);
+            }
             case 3 -> {
                 int[][] matriz = mainMetodos.llenarMatriz(filas, columnas);
                 mainMetodos.mostrarMatriz(matriz);
@@ -32,10 +38,16 @@ public class App {
                 System.out.println();
                 punto3.mostrarVector(punto3.sumColum(matriz), "Columna ");
             }
+            case 4 ->{
+                int[][] matriz = mainMetodos.llenarMatriz(filas, columnas);
+                mainMetodos.mostrarMatriz(matriz);
+                Puntos punto4 = new Puntos();
+                punto4.sumaColumnas(matriz);
+            }
             
             default -> System.out.println("Esta función esta en trabajo....");
         }
-        
+
 
     }
 }
