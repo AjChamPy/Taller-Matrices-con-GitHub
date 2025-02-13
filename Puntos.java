@@ -43,12 +43,20 @@ public class Puntos {
     }
 
     public int[] sumColum(int[][] matriz){
+        int numeroMayor = 0;
         int[] sumColum = new int[matriz[0].length];
+        
         for (int j = 0; j < matriz[0].length; j++) {
             for (int i = 0; i < matriz.length; i++) {
                 sumColum[j] += matriz[i][j];
             }
         }
+        for (int i = 0; i < sumColum.lenght; i++) {
+            if(numeroMayor <= sumColum[i]){
+                numeroMayor = sumColum[i];
+            }
+        }
+    
         return sumColum;
     }
 
