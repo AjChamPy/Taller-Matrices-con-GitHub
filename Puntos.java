@@ -1,5 +1,3 @@
-
-
 public class Puntos {
     //Punto_1
     public int sumarValores(int[][] matriz){
@@ -28,7 +26,6 @@ public class Puntos {
     }
 
     //Punto_3
-
     public void mostrarVector(int[] vector, String contador){
         for (int i = 0; i < vector.length; i++) {
             System.out.print(" "+contador + " " + (i+1) + ": " + vector[i] + " | ");
@@ -54,6 +51,7 @@ public class Puntos {
         }
         return sumColum;
     }
+
 
     //Punto_4
     public void sumaColumnas(int[][] matriz){
@@ -87,4 +85,32 @@ public class Puntos {
     }
 
     
+
+
+    //Punto 5
+    public int[] matrizAvector(int[][] matriz){
+        int filas = matriz.length;
+        int columnas = matriz[0].length;
+
+        int[] vector = new int[filas * columnas];
+        int cont = 0;
+
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                vector[cont++] = matriz[i][j];
+            }
+        }
+        return vector; 
+    }
+
+    public void imprimirVectorDeMatriz(int[] vector){
+        System.out.println("-------- VECTOR CREADO APARTIR DE LA MATRIZ --------");
+        for (int i = 0; i < vector.length; i++) {
+            System.out.print(vector[i]);
+            if (i< vector.length-1) {
+                System.out.print(" - ");
+            }
+        }
+    }
+
 }

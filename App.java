@@ -44,6 +44,12 @@ public class App {
                 Puntos punto4 = new Puntos();
                 punto4.sumaColumnas(matriz);
             }
+            case 5 -> {
+                int[][] matriz = mainMetodos.llenarMatriz(filas, columnas);
+                mainMetodos.mostrarMatriz(matriz);
+                Puntos punto5 = new Puntos();
+                punto5.imprimirVectorDeMatriz(punto5.matrizAvector(matriz));
+            }
             
             default -> System.out.println("Esta función esta en trabajo....");
         }
