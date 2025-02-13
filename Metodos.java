@@ -20,7 +20,7 @@ public static int[] preguntarDimensionMatriz(){
         
         for (int i = 0; i <filas; i++) {
             for (int j = 0; j < columnas; j++) { 
-                matriz[i][j] = (int)(Math.random()*2+1);
+                matriz[i][j] = (int)(Math.random()*10+1);
             }
         }
 
@@ -38,4 +38,6 @@ public static int[] preguntarDimensionMatriz(){
         }
         System.out.println("-------------------------");
     }
+
+
 }
